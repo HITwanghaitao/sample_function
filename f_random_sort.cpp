@@ -5,15 +5,15 @@
 
 using namespace std;
 
-vector<double> random_sort(vector<double> array)//Ëæ»úÅÅĞò
+vector<double> random_sort(vector<double> array)//éšæœºæ’åº
 {
-	vector<double> r; //ÓÃÓÚ´æ´¢Íê³ÉÅÅĞòµÄÈİÆ÷
+	vector<double> r; //ç”¨äºå­˜å‚¨å®Œæˆæ’åºçš„å®¹å™¨
 
-	int m = array.size(); //ÊäÈëÊı¾İµÄ³¤¶È
+	int m = array.size(); //è¾“å…¥æ•°æ®çš„é•¿åº¦
 	
-	vector<double>::iterator  iter; //ÈİÆ÷Ö¸Õë
+	vector<double>::iterator  iter; //å®¹å™¨æŒ‡é’ˆ
 
-	srand(time(NULL)); //Ëæ»úÊıÖÖ×Ó
+	srand(time(NULL)); //éšæœºæ•°ç§å­
 	for (int j = 0; j < m; j++)
 	{
 		iter = array.begin();
@@ -24,8 +24,8 @@ vector<double> random_sort(vector<double> array)//Ëæ»úÅÅĞò
 		//	cout << array[k] << " ";
 		//}
 		//cout << endl;
-		// ÀàËÆÓÚ³éÅÆ
-		int flag = floor((double(rand()) / RAND_MAX) * m_change); //ÓÃÓÚÉú³É[0,m_change]ÄÚµÄÕûÊıËæ»úÊı
+		// ç±»ä¼¼äºæŠ½ç‰Œ
+		int flag = floor((double(rand()) / RAND_MAX) * m_change); //ç”¨äºç”Ÿæˆ[0,m_change]å†…çš„æ•´æ•°éšæœºæ•°
 		//cout << *(iter + flag) << endl;
 		r.push_back(*(iter + flag));
 		array.erase(iter + flag);
@@ -34,7 +34,7 @@ vector<double> random_sort(vector<double> array)//Ëæ»úÅÅĞò
 }
 int main()
 {
-	//²âÊÔ
+	//æµ‹è¯•
 	vector<double> d = { 1,2,3,4,5,6,7,8,9,10 };
 	vector<double> r;
 	r = random_sort(d);
